@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    defaultConfig {
+        applicationId "com.xing.example.anyadvertisedapp"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 20
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            applicationIdSuffix '.debug'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':adtracker')
+    implementation 'com.android.support:support-v4:' + rootProject.ext.supportLibraryVersion
+    implementation 'com.android.support:appcompat-v7:' + rootProject.ext.supportLibraryVersion
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:design:' + rootProject.ext.supportLibraryVersion
+}
