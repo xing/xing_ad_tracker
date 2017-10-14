@@ -1,0 +1,50 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xing.android.adtracker">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application>
+<!--
+    to have the receiver run when the install referrer broadcast is sent, add the following lines within the
+    <application> section of the application's manifest.xml:
+
+        <receiver android:name="com.xing.android.adtracker.XNGAdTrackerReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        If you have other broadcast receivers listening for the install referrer action, add the following meta data
+        tags per other broadcast receiver within the above receiver tag, where the names are unique arbitrary strings
+        and the values are the fully qualified class names of the BroadcastReceiver implementations.
+
+        <meta-data android:name="forward.to.receiver.1" android:value="com.example.anyadvertisedapp.Receiver"/>
+        <meta-data android:name="forward.to.receiver.2" android:value="com.example.yet.another.Receiver"/>
+-->
+
+        <service android:name="com.xing.android.adtracker.internal.XNGAdTrackerIntentService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service android:name="com.xing.android.adtracker.internal.XNGAdTrackerJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- this receiver is disabled by default and will only be enabled when required, and only under OS versions below 21 -->
+        <receiver android:name="com.xing.android.adtracker.internal.ConnectivityReceiver"
+            android:enabled="false"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>
