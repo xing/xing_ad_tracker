@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://www.xing.com/xas'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'XING iOS Team' => 'iphonedev@xing.com' }
-  s.source           = { :git => 'https://github.com/xing/xing_ad_tracker.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/tapworker/xing_ad_tracker.git', :tag => s.version.to_s }
   s.source_files     = 'XNGAdTracker/XNGAdTracker.{h,m}'
   s.public_header_files = 'XNGAdTracker/XNGAdTracker.h'
 
