@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.description      = 'XNGAdTracker is used to track conversions for app install ads in the XING network. For more information see https://www.xing.com/xas'
 
   s.homepage         = 'https://www.xing.com/xas'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'Apache 2.0', :file => 'iOS/LICENSE' }
   s.author           = { 'XING iOS Team' => 'iphonedev@xing.com' }
   s.source           = { :git => 'https://github.com/tapworker/xing_ad_tracker.git', :tag => s.version.to_s }
   s.source_files     = 'iOS/XNGAdTracker/XNGAdTracker.{h,m}'
