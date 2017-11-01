@@ -10,7 +10,6 @@ Pod::Spec.new do |s|
   s.author           = { 'XING iOS Team' => 'iphonedev@xing.com' }
   s.source           = { :git => 'https://github.com/tapworker/xing_ad_tracker.git', :tag => s.version.to_s }
   s.source_files     = 'iOS/XNGAdTracker/*.*'
-  s.public_header_files = 'iOS/XNGAdTracker/XNGAdTracker.h'
 
   s.ios.deployment_target = '8.0'
 
