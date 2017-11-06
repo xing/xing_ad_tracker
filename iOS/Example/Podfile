@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'XNGAdTracker_Example' do
+  pod 'XNGAdTracker', :path => '../'
+
+  target 'XNGAdTracker_Tests' do
+    inherit! :search_paths
+
+
+  end
+end
