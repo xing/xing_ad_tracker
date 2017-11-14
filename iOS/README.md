@@ -1,6 +1,5 @@
 # XNGAdTracker
-Conversion tracker for tracking Android app installs triggered by app ads in the XING network..
-For documenation on how to use it see [user documentation](UserDocumentation.md).
+Conversion tracker for tracking iOS app installs triggered by app ads in the XING network.
 
 ## Example
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -10,7 +9,7 @@ XNGAdTracker is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile and run `pod install`:
 
 ```ruby
-pod "XNGAdTracker" :git => 'https://github.com/xing/xing_ad_tracker.git', :tag => '1.0.0'
+pod "XNGAdTracker", :git => 'https://github.com/xing/xing_ad_tracker.git', :tag => '1.0.0'
 ```
 
 If you want to manually install the library download the repository into your project via git or as a zip and drag the XNGAdTracker folder into your Xcode project. If you want to use XNGAdTracker within Swift files don't forget to add `XNGAdTracker.h` to your bridging header.
